@@ -1,1 +1,31 @@
 @use '../helpers' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: rem(20);
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    column-gap: rem(40);
+    font-size: rem(20);
+  }
+
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    color: black;
+
+    &.active {
+      font-weight: bold;
+      background: var(--color-green);
+      padding: rem(9) rem(21);
+      border-radius: rem(9);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@use "helpers" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-weight: 500;
+}
+h4, .h4, {
+  font-weight: 600;
+}
+h1, .h1 {
+  @include fluid-text(60, 40);
+
+  @include mobile {
+    @include fluid-text(43, 36)
+  }
+
+  line-height: 1.2;
+}
+h2, .h2 {
+  @include fluid-text(40, 30);
+
+  @include mobile {
+    @include fluid-text(36, 26);
+  }
+
+  line-height: 1.3;
+}
+h3, .h3 {
+  @include fluid-text(30, 20);
+
+  @include mobile {
+    @include fluid-text(26, 18)
+  }
+}
+h4, .h4 {
+  @include fluid-text(20, 18);
+
+  @include mobile {
+    @include fluid-text(18, 16)
+  }
+}
+p {
+  font-size: rem(18);
+
+  @include mobile {
+    @include fluid-text(24, 16)
+  }
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 86.11%;
+}
