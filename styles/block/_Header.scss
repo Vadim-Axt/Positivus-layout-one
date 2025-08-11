@@ -19,7 +19,7 @@
     list-style: none;
   }
   &__link {
-    color: black;
+    color: var(--color-dark);
 
     &.active {
       font-weight: bold;
