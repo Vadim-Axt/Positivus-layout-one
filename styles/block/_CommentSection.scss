@@ -1,0 +1,96 @@
+@use '../helpers' as *;
+
+.comment-section {
+  position: relative;
+  background: var(--color-dark);
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem(70);
+
+
+
+  .comment-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+
+  }
+
+  &__comment {
+    flex-basis: 100%;
+
+    &-text {
+      border: 2px solid var(--color-green);
+      border-radius: rem(45);
+      padding: rem(48) rem(52);
+    }
+
+    &-info {
+      padding-left: rem(48);
+
+      h4 {
+        color: var(--color-green);
+      }
+    }
+  }
+
+  &__controllers {
+    position: absolute;
+    top: 27%;
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+}
+  .slide {
+    position: absolute;
+    width: 60%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide.next {
+    transform: translateX(200%);
+  }
+
+  .slide.prev {
+    transform: translateX(-200%);
+  }
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 8px;
+
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .dot.active {
+    background: var(--color-green);
+  }
+  }

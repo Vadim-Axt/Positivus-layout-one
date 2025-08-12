@@ -105,7 +105,7 @@ a {
   padding: 0.5625rem 1.3125rem;
   border-radius: 0.5625rem;
 }
-/* hero section */
+
 .hero-section {
   margin-top: 4.375rem;
   display: flex;
@@ -143,6 +143,85 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.comment-section {
+  position: relative;
+  background: var(--color-dark);
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4.375rem;
+}
+.comment-section .comment-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.comment-section__comment {
+  flex-basis: 100%;
+}
+.comment-section__comment-text {
+  border: 2px solid var(--color-green);
+  border-radius: 2.8125rem;
+  padding: 3rem 3.25rem;
+}
+.comment-section__comment-info {
+  padding-left: 3rem;
+}
+.comment-section__comment-info h4 {
+  color: var(--color-green);
+}
+.comment-section__controllers {
+  position: absolute;
+  top: 27%;
+  width: 83%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  width: 60%;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.next {
+  transform: translateX(200%);
+}
+
+.slide.prev {
+  transform: translateX(-200%);
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 8px;
+}
+.dots-container .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dots-container .dot.active {
+  background: var(--color-green);
 }
 
 /*# sourceMappingURL=main.css.map */
